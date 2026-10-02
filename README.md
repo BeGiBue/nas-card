@@ -1,7 +1,13 @@
 <h1 align="center">NAS Card</h1>
 
 <p align="center">
-  Theme-sensitive Home-Assistant-Custom-Card für NAS-Systeme – vorkonfiguriert für eine Synology DS720+.
+  Custom-Card für NAS-Systeme – vorkonfiguriert für eine Synology DS720+.
+</p>
+
+## Screenshot
+
+<p align="center">
+  <img src="./images/screenshot.png" alt="NAS Card Screenshot" width="1000">
 </p>
 
 <p align="center">
