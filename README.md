@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.0.0</strong><br>
+  <strong>Version 1.0.1</strong><br>
   <a href="https://github.com/BeGiBue/nas_card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/nas_card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -78,7 +78,7 @@ Alle Entitäten können im grafischen Karteneditor geändert werden. Dadurch ist
 4. **NAS Card** installieren.
 5. Home Assistant bzw. den Browser vollständig neu laden.
 
-Das Repository enthält eine HACS-Validierung unter `.github/workflows/validate.yml`. Sie wird bewusst nur manuell gestartet und läuft nicht bei jedem Push. In `hacs.json` ist `nas-card.js` explizit als Plugin-Datei angegeben.
+Das Repository enthält die offizielle HACS-Validierung unter `.github/workflows/validate.yml`. Sie läuft bei Änderungen auf `main`, bei Pull Requests und kann zusätzlich manuell gestartet werden. In `hacs.json` ist `nas-card.js` explizit als Plugin-Datei angegeben.
 
 ## Card hinzufügen
 
@@ -147,7 +147,7 @@ Die Card berechnet daraus automatisch den Gesamt- und den freien Speicherplatz. 
 
 ## Bild
 
-Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet. 
+Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet.
 
 Für ein anderes NAS kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
 
@@ -182,6 +182,8 @@ Dieses Projekt ist ein unabhängiges Community-Projekt und steht in keiner Verbi
 
 ## Lizenz
 
-Creative Commons Attribution-NonCommercial 4.0 International (**CC BY-NC 4.0**).
+GNU Affero General Public License v3.0 only (**AGPL-3.0-only**).
+
+Nutzung, Änderungen und Weitergabe sind unter den Bedingungen der AGPL erlaubt; abgeleitete Werke müssen unter derselben Lizenz stehen. Bei modifizierten Versionen, die über ein Netzwerk genutzt werden, muss der entsprechende Quellcode den Nutzern zugänglich gemacht werden.
 
 Details stehen in [`LICENSE`](LICENSE).
