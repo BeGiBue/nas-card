@@ -7,7 +7,7 @@
 ## Screenshot
 
 <p align="center">
-  <img src="./images/Screenshot.png" alt="NAS Card Screenshot" width="1000">
+  <img src="https://raw.githubusercontent.com/BeGiBue/nas-card/main/images/Screenshot.png" alt="NAS Card Screenshot" width="1000">
 </p>
 
 <p align="center">
@@ -147,7 +147,7 @@ Die Card berechnet daraus automatisch den Gesamt- und den freien Speicherplatz. 
 
 ## Bild
 
-Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet.
+Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet. Es existiert nicht als separates Repository-Asset und wird für die Card nicht aus dem `images`-Ordner geladen.
 
 Für ein anderes NAS kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
 
