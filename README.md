@@ -19,11 +19,13 @@
 - Editierbarer Haupttitel und Untertitel über native Home-Assistant-Textfelder
 - Festes `mdi:nas` Symbol vor dem Haupttitel
 - Alle Entitäten über native Home-Assistant-Entity-Picker auswählbar
-- Freigestelltes DS720+-Bild im Repository; optional eigene Bild-URL verwendbar
+- Freigestelltes DS720+-Standardbild direkt in der JavaScript-Komponente eingebettet; optional eigene Bild-URL verwendbar
 - Temperatur, CPU, RAM/Speicher und Sicherheitsstatus
 - Inbound- und Outbound-Durchsatz in zwei großen Statusfeldern
 - Volume-Auslastung als Tortendiagramm mit Belegt/Frei/Gesamt
 - Zwei Laufwerksbereiche mit Temperatur, Restlebensdauer, Sektoren und Status
+- Bezeichnungen in den Messfeldern oberhalb der Zustände
+- Daten und Statuswerte innerhalb der Felder zentriert
 - DSM/Update-Anzeige
 - Neustart, letzter Start und Herunterfahren in einer einheitlichen unteren Reihe
 - "Letzter Start" besteht aus genau zwei Textzeilen und nutzt Home Assistants automatische Zustands-/Zeitformatierung
@@ -74,7 +76,7 @@ Alle Entitäten können im grafischen Karteneditor geändert werden. Dadurch ist
 4. **NAS Card** installieren.
 5. Home Assistant bzw. den Browser vollständig neu laden.
 
-Das Repository enthält eine HACS-Validierung unter `.github/workflows/validate.yml`. In `hacs.json` ist `nas-card.js` explizit als Plugin-Datei angegeben.
+Das Repository enthält eine HACS-Validierung unter `.github/workflows/validate.yml`. Sie wird bewusst nur manuell gestartet und läuft nicht bei jedem Push. In `hacs.json` ist `nas-card.js` explizit als Plugin-Datei angegeben.
 
 ## Card hinzufügen
 
@@ -128,7 +130,7 @@ shutdown_entity: button.diskstation_shutdown
 
 ## Grafischer Editor
 
-Die Card verwendet Home Assistants aktuellen eingebauten Formular-Editor (`getConfigForm()`). Dadurch werden Titel und Untertitel als native Textfelder und Entitäten als native Entity-Picker dargestellt.
+Die Card verwendet Home Assistants eingebauten Formular-Editor (`getConfigForm()`). Dadurch werden Titel und Untertitel als native Textfelder und Entitäten als native Entity-Picker dargestellt.
 
 Die Gruppen **Allgemein**, **System**, **Netzwerk**, **Volume**, **Laufwerk 1**, **Laufwerk 2**, **Update** und **Aktionen** können im Editor aufgeklappt werden.
 
@@ -143,9 +145,11 @@ Die Card berechnet daraus automatisch den Gesamt- und den freien Speicherplatz. 
 
 ## Bild
 
-Das freigestellte Standardbild liegt unter `images/ds720plus.png`. Die Card lädt es standardmäßig direkt aus diesem GitHub-Repository. HACS selbst installiert bei einem Dashboard-Plugin nur die JavaScript-Datei.
+Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet. Dadurch benötigt die Card für das Standardbild keine zusätzliche Datei und keinen externen Bildabruf.
 
-Für eine vollständig lokale Installation oder ein anderes NAS kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
+Die Datei unter `images/ds720plus.png` dient nur als Vorschau bzw. Repository-Asset.
+
+Für ein anderes NAS kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
 
 ```yaml
 image_url: /local/images/mein_nas.png
@@ -157,7 +161,7 @@ Mit `show_image: false` kann das Gerätebild vollständig ausgeblendet werden.
 
 Im Home-Assistant-Sections-Dashboard ist die Breite frei einstellbar. Die Card startet mit 12 Spalten und erlaubt den kompletten Bereich von 1 bis 12 Spalten.
 
-Die Höhe wird bewusst nicht als Grid-Größe vorgegeben. Home Assistant lässt die Card damit die benötigte Höhe selbst bestimmen; eine manuelle Höhen-Skalierung wird nicht angeboten. Das Layout ist gegenüber der ersten Version deutlich kompakter und orientiert sich von den Abständen und Proportionen an der Eaton UPS Card. Bei schmalen Breiten passt sich die interne Anordnung automatisch an.
+Die Höhe wird bewusst nicht als Grid-Größe vorgegeben. Home Assistant lässt die Card damit die benötigte Höhe selbst bestimmen; eine manuelle Höhen-Skalierung wird nicht angeboten. Das Layout orientiert sich von den Abständen und Proportionen an der Eaton UPS Card. Bei schmalen Breiten passt sich die interne Anordnung automatisch an.
 
 ## Letzter Start
 
