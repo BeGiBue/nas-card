@@ -27,7 +27,8 @@
 - DSM/Update-Anzeige
 - Neustart, letzter Start und Herunterfahren in einer einheitlichen unteren Reihe
 - "Letzter Start" besteht aus genau zwei Textzeilen und nutzt Home Assistants automatische Zustands-/Zeitformatierung
-- Native Größenanpassung im Sections-Dashboard über `getGridOptions()`
+- Breite im Sections-Dashboard frei von 1 bis 12 Spalten einstellbar
+- Höhe wird automatisch durch die Card bestimmt und ist nicht manuell skalierbar
 
 ## Standard-Entitäten
 
@@ -154,9 +155,9 @@ Mit `show_image: false` kann das Gerätebild vollständig ausgeblendet werden.
 
 ## Layout / Größe
 
-In einem Home-Assistant-Sections-Dashboard unterstützt die Card das native Resize-Verhalten. Standardmäßig belegt sie 12 Spalten und 14 Reihen. Die Mindestgröße liegt bei 6 Spalten und 8 Reihen; die Höhe kann darüber hinaus weiter vergrößert werden.
+Im Home-Assistant-Sections-Dashboard ist die Breite frei einstellbar. Die Card startet mit 12 Spalten und erlaubt den kompletten Bereich von 1 bis 12 Spalten.
 
-Die Card passt ihr internes Layout responsiv an schmalere Größen an und bleibt innerhalb des von Home Assistant zugewiesenen Slots.
+Die Höhe wird bewusst nicht als Grid-Größe vorgegeben. Home Assistant lässt die Card damit die benötigte Höhe selbst bestimmen; eine manuelle Höhen-Skalierung wird nicht angeboten. Das Layout ist gegenüber der ersten Version deutlich kompakter und orientiert sich von den Abständen und Proportionen an der Eaton UPS Card. Bei schmalen Breiten passt sich die interne Anordnung automatisch an.
 
 ## Letzter Start
 
