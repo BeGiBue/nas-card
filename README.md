@@ -19,9 +19,9 @@
 - Editierbarer Haupttitel und Untertitel über native Home-Assistant-Textfelder
 - Festes `mdi:nas` Symbol vor dem Haupttitel
 - Alle Entitäten über native Home-Assistant-Entity-Picker auswählbar
-- Eingebettetes, freigestelltes DS720+-Bild; optional eigene Bild-URL verwendbar
+- Freigestelltes DS720+-Bild im Repository; optional eigene Bild-URL verwendbar
 - Temperatur, CPU, RAM/Speicher und Sicherheitsstatus
-- Inbound- und Outbound-Durchsatz mit Live-Sparkline während der Kartenlaufzeit
+- Inbound- und Outbound-Durchsatz in zwei großen Statusfeldern
 - Volume-Auslastung als Tortendiagramm mit Belegt/Frei/Gesamt
 - Zwei Laufwerksbereiche mit Temperatur, Restlebensdauer, Sektoren und Status
 - DSM/Update-Anzeige
@@ -142,9 +142,9 @@ Die Card berechnet daraus automatisch den Gesamt- und den freien Speicherplatz. 
 
 ## Bild
 
-Das freigestellte Standardbild der DS720+ ist direkt in `nas-card.js` eingebettet. HACS muss deshalb keine zusätzliche Bilddatei installieren.
+Das freigestellte Standardbild liegt unter `images/ds720plus.png`. Die Card lädt es standardmäßig direkt aus diesem GitHub-Repository. HACS selbst installiert bei einem Dashboard-Plugin nur die JavaScript-Datei.
 
-Optional kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
+Für eine vollständig lokale Installation oder ein anderes NAS kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
 
 ```yaml
 image_url: /local/images/mein_nas.png
