@@ -7,7 +7,7 @@
 ## Screenshot
 
 <p align="center">
-  <img src="./images/screenshot.png" alt="NAS Card Screenshot" width="1000">
+  <img src="./images/Screenshot.png" alt="NAS Card Screenshot" width="1000">
 </p>
 
 <p align="center">
@@ -147,9 +147,7 @@ Die Card berechnet daraus automatisch den Gesamt- und den freien Speicherplatz. 
 
 ## Bild
 
-Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet. Dadurch benötigt die Card für das Standardbild keine zusätzliche Datei und keinen externen Bildabruf.
-
-Die Datei unter `images/ds720plus.png` dient nur als Vorschau bzw. Repository-Asset.
+Das freigestellte DS720+-Standardbild ist direkt in der JavaScript-Komponente eingebettet. 
 
 Für ein anderes NAS kann im grafischen Editor eine eigene Bild-URL eingetragen werden, z. B.:
 
