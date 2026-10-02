@@ -1,4 +1,4 @@
-// NAS Card v1.0.3 layout loader — CC BY-NC 4.0 — BeGiBue
+// NAS Card v1.0.0 layout loader — CC BY-NC 4.0 — BeGiBue
 (async()=>{
   await import('./nas-card-core.js');
   const C=customElements.get('nas-card');
@@ -53,11 +53,11 @@
   C.prototype.render=function(){
     originalRender.call(this);
     const style=this.shadowRoot?.querySelector('style');
-    if(style&&!style.textContent.includes('nas-card-v1.0.3-layout')){
-      style.textContent+=`\n/* nas-card-v1.0.3-layout */\n${layoutCss}`;
+    if(style&&!style.textContent.includes('nas-card-v1.0.0-layout')){
+      style.textContent+=`\n/* nas-card-v1.0.0-layout */\n${layoutCss}`;
     }
   };
 
   document.querySelectorAll('nas-card').forEach(card=>card.render?.());
-  console.info('NAS Card v1.0.3 layout patch loaded');
+  console.info('NAS Card v1.0.0 loaded');
 })();
