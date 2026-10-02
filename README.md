@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/BeGiBue/nas_card/main/images/ds720plus.png" alt="Synology DS720+" width="360">
-</p>
-
 <h1 align="center">NAS Card</h1>
 
 <p align="center">
