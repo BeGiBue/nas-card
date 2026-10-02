@@ -12,4 +12,4 @@ Erste Version der universell konfigurierbaren NAS Card für Home Assistant.
 - Volume-Belegung als Tortendiagramm
 - Einheitlich große Symbole in der unteren Aktionszeile
 - "Letzter Start" mit Home-Assistant-Zeit-/Datumsformat und nur zwei Textzeilen
-- Eingebettetes, freigestelltes DS720+-Bild
+- Freigestelltes DS720+-Bild als Repository-Asset
