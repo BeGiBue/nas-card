@@ -8,10 +8,10 @@
 - Frei editierbarer Titel und Untertitel; festes `mdi:nas` Symbol vor dem Haupttitel.
 - Native Größenanpassung in Sections-Dashboards über `getGridOptions()`.
 - Systemwerte für Temperatur, CPU, RAM/Speicher und Sicherheitsstatus.
-- Inbound/Outbound-Anzeige mit Live-Sparkline während der Kartenlaufzeit.
+- Inbound/Outbound-Anzeige in zwei großen Statusfeldern.
 - Volume-Tortendiagramm mit Belegt/Frei/Gesamt.
 - Zwei Laufwerkszeilen mit Temperatur, Restlebensdauer, Sektoren und Status.
 - DSM/Update-Anzeige.
 - Neustart, letzter Start und Herunterfahren in einer einheitlichen unteren Aktionszeile.
 - "Letzter Start" auf zwei Zeilen begrenzt und mit Home Assistants automatischer Zustandsformatierung.
-- Freigestelltes DS720+-Bild in die JavaScript-Datei eingebettet; optional durch eigene Bild-URL ersetzbar.
+- Freigestelltes DS720+-Bild als Repository-Asset; optional durch eigene Bild-URL ersetzbar.
