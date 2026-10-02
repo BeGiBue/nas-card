@@ -1,6 +1,6 @@
 # NAS Card 1.0.0
 
-Erste Version der universell konfigurierbaren NAS Card für Home Assistant.
+Erste öffentliche Version der universell konfigurierbaren NAS Card für Home Assistant.
 
 ## Highlights
 
@@ -8,8 +8,21 @@ Erste Version der universell konfigurierbaren NAS Card für Home Assistant.
 - Native Entity-Picker und native Textfelder im visuellen Editor
 - Editierbarer Titel und Untertitel
 - `mdi:nas` als festes Titelsymbol
-- Native Home-Assistant-Grid-Größenanpassung
-- Volume-Belegung als Tortendiagramm
+- Breite im Home-Assistant-Sections-Dashboard frei einstellbar; Höhe automatisch
+- Zentrierte Messwerte und Statusanzeigen in den Datenfeldern
+- Volume-Belegung als Tortendiagramm mit Belegt/Frei/Gesamt
+- Laufwerksbereiche mit Bezeichnung oben und Zustand darunter
 - Einheitlich große Symbole in der unteren Aktionszeile
 - "Letzter Start" mit Home-Assistant-Zeit-/Datumsformat und nur zwei Textzeilen
-- Freigestelltes DS720+-Bild als Repository-Asset
+- Freigestelltes DS720+-Standardbild direkt in der JavaScript-Komponente eingebettet
+- Optional eigene Bild-URL konfigurierbar
+
+## Installation
+
+Das Repository ist für die Installation als HACS-Dashboard-Plugin vorbereitet. `hacs.json` verweist auf `nas-card.js`.
+
+Die HACS-Validierung wird bewusst nur manuell über GitHub Actions gestartet und läuft nicht automatisch bei jedem Push.
+
+## Lizenz
+
+CC BY-NC 4.0
