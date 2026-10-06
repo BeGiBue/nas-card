@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.0.1</strong><br>
+  <strong>Version 1.1.0</strong><br>
   <a href="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -21,18 +21,21 @@
 - Editierbarer Haupttitel und Untertitel über native Home-Assistant-Textfelder
 - Festes `mdi:nas` Symbol vor dem Haupttitel
 - Alle Entitäten über native Home-Assistant-Entity-Picker auswählbar
-- Freigestelltes DS720+-Standardbild direkt in der JavaScript-Komponente eingebettet; optional eigene Bild-URL verwendbar
+- Freigestelltes DS720+-Standardbild direkt in der JavaScript-Komponente eingebettet – standardmäßig groß im Hintergrund, alternativ neben dem Titel; optional eigene Bild-URL verwendbar
 - Temperatur, CPU, RAM/Speicher und Sicherheitsstatus
 - Inbound- und Outbound-Durchsatz in zwei großen Statusfeldern
-- Volume-Auslastung als Tortendiagramm mit Belegt/Frei/Gesamt
+- Volume-Auslastung als Ringdiagramm mit Belegt/Frei/Gesamt
 - Zwei Laufwerksbereiche mit Temperatur, Restlebensdauer, Sektoren und Status
 - Bezeichnungen in den Messfeldern oberhalb der Zustände
-- Daten und Statuswerte innerhalb der Felder zentriert
-- DSM/Update-Anzeige
+- Messwerte linksbündig mit Icon-Chip, großer Zahl und kleiner Einheit
+- Warnfarben für CPU, RAM und Volume (orange ab 75/80/80 %, rot ab 90 %)
+- DSM-Update-Zeile mit installierter und ggf. neuer Version
 - Neustart, letzter Start und Herunterfahren in einer einheitlichen unteren Reihe
+- Neustart und Herunterfahren verlangen ein zweites Tippen zur Bestätigung
 - "Letzter Start" besteht aus genau zwei Textzeilen und nutzt Home Assistants automatische Zustands-/Zeitformatierung
 - Breite im Sections-Dashboard frei von 1 bis 12 Spalten einstellbar
 - Höhe wird automatisch durch die Card bestimmt und ist nicht manuell skalierbar
+- Optimiert für Hochformat und Touch – iPhone, iPad und Raspberry-Pi-Kiosk: Schrift wächst mit der Kartenbreite, breites Layout ab 480 px
 
 ## Standard-Entitäten
 
@@ -128,6 +131,24 @@ update_entity: update.diskstation_dsm_update
 reboot_entity: button.diskstation_reboot
 last_start_entity: sensor.diskstation_letzter_start
 shutdown_entity: button.diskstation_shutdown
+```
+
+## Optionen
+
+| Option | Werte | Standard | Beschreibung |
+|---|---|---|---|
+| `scale` | `0.8` – `1.8` | `1` | Skaliert die gesamte Card, z. B. für Kiosk-Displays. |
+| `image_mode` | `background` \| `inline` | `background` | `background`: Gerätebild groß im Hintergrund. `inline`: Gerätebild neben dem Titel. |
+| `layout` | `auto` \| `wide` \| `compact` | `auto` | `auto`: breites Layout ab 480 px Kartenbreite. `wide` / `compact` erzwingen das jeweilige Layout. |
+| `confirm_actions` | `true` \| `false` | `true` | Neustart und Herunterfahren erst nach einem zweiten Tippen auslösen. |
+
+Beispiel für ein Kiosk-Display:
+
+```yaml
+type: custom:nas-card
+scale: 1.3
+image_mode: background
+layout: auto
 ```
 
 ## Grafischer Editor

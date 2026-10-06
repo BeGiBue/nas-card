@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.0 - 2026-10-06
+
+### Geändert
+
+- Optimiert für Hochformat (iPhone, iPad, Raspberry-Pi-Kiosk): alle Größen in em, die Schrift wächst mit der Kartenbreite; breites Layout ab 480 px (Option layout: auto | wide | compact).
+- Einzeldatei: nas-card.js enthält jetzt alles; nas-card-core.js und das Überschreiben per !important entfallen (HACS lädt nur die Datei aus hacs.json).
+- Glas-Look: Hintergrund, Rand und Blur kommen vom Theme. Messwerte linksbündig mit Icon-Chip; CPU, RAM und Volume mit Warnfarben (orange ab 75/80/80 %, rot ab 90 %).
+- Gerätebild groß im Hintergrund (Option image_mode: background | inline) mit Deckkraft 52 %.
+- Neustart und Herunterfahren verlangen ein zweites Tippen (confirm_actions: false schaltet es ab).
+- Neue Option scale (0,8 – 1,8) für Kiosk-Displays; die Card zeichnet nur bei geänderten Werten neu.
+
 ## 1.0.1 - 2026-10-02
 
 - Lizenz auf GNU Affero General Public License v3.0 only (AGPL-3.0-only) umgestellt.
