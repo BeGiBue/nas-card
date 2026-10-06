@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.1.0</strong><br>
+  <strong>Version 1.1.1</strong><br>
   <a href="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -25,7 +25,7 @@
 - Temperatur, CPU, RAM/Speicher und Sicherheitsstatus
 - Inbound- und Outbound-Durchsatz in zwei großen Statusfeldern
 - Volume-Auslastung als Ringdiagramm mit Belegt/Frei/Gesamt
-- Zwei Laufwerksbereiche mit Temperatur, Restlebensdauer, Sektoren und Status
+- Zwei Laufwerksbereiche mit Temperatur, Restlebensdauer, Sektoren und Status – Werte rechtsbündig wie in der Volume-Box
 - Bezeichnungen in den Messfeldern oberhalb der Zustände
 - Messwerte linksbündig mit Icon-Chip, großer Zahl und kleiner Einheit
 - Warnfarben für CPU, RAM und Volume (orange ab 75/80/80 %, rot ab 90 %)
@@ -182,7 +182,7 @@ Mit `show_image: false` kann das Gerätebild vollständig ausgeblendet werden.
 
 Im Home-Assistant-Sections-Dashboard ist die Breite frei einstellbar. Die Card startet mit 12 Spalten und erlaubt den kompletten Bereich von 1 bis 12 Spalten.
 
-Die Höhe wird bewusst nicht als Grid-Größe vorgegeben. Home Assistant lässt die Card damit die benötigte Höhe selbst bestimmen; eine manuelle Höhen-Skalierung wird nicht angeboten. Das Layout orientiert sich von den Abständen und Proportionen an der Eaton UPS Card. Bei schmalen Breiten passt sich die interne Anordnung automatisch an.
+Die Höhe wird bewusst nicht als Grid-Größe vorgegeben. Home Assistant lässt die Card damit die benötigte Höhe selbst bestimmen. Die Card meldet ihre Mindesthöhe (`min_rows`); im Layout-Editor lässt sich die Höhe daher nicht kleiner einstellen, als der Inhalt braucht. Das Layout orientiert sich von den Abständen und Proportionen an der Eaton UPS Card. Bei schmalen Breiten passt sich die interne Anordnung automatisch an.
 
 ## Letzter Start
 

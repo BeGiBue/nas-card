@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.1 - 2026-10-06
+
+### Geändert
+
+- Laufwerke: Bezeichnung links, Wert rechts – wie Belegt/Frei/Gesamt in der Volume-Box; Status als Pill im Kopf.
+- Kompakter für das iPad Pro 13": Netzwerkwerte im breiten Layout einzeilig, geringere Abstände; bei 650–799 px Kartenbreite ca. 40 px niedriger.
+- Innenabstand oben in px statt em, damit der Titel auf gleicher Höhe beginnt wie bei der Eaton UPS Card.
+
+### Behoben
+
+- Die Card meldet ihre benötigte Mindesthöhe (`min_rows`); im Layout-Editor lassen sich nicht mehr zu wenige Zeilen einstellen.
+- Ein zusätzlich noch geladener alter 1.0.1-Loader konnte die Laufwerksanzeige überschreiben (z. B. „Temperatur31,0 °C“). Die Card ist dagegen jetzt geschützt.
+
 ## 1.1.0 - 2026-10-06
 
 ### Geändert
