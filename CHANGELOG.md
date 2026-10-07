@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.3 - 2026-10-07
+
+### Geändert
+
+- Laufwerke stehen auch in der kompakten Ansicht wieder nebeneinander; untereinander erst, wenn eine Box schmaler als 11em würde (z. B. iPhone SE). In schmalen Laufwerksboxen entfällt das Festplatten-Symbol im Kopf und die Status-Pill wird enger, damit der Text in der Box bleibt.
+- Etwas kompakter: kleineres Ringdiagramm, flachere Kacheln für Letzter Start, Neustart und Herunterfahren. Bei ca. 460 px Kartenbreite (7"-Raspberry-Display hochkant) 916 statt 1118 px hoch; mit `scale: 0.85` 779 px.
+
 ## 1.1.2 - 2026-10-07
 
 ### Geändert
