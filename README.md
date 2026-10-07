@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.1.1</strong><br>
+  <strong>Version 1.1.2</strong><br>
   <a href="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
