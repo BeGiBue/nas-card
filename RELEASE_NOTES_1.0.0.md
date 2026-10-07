@@ -25,4 +25,4 @@ Die HACS-Validierung wird bewusst nur manuell über GitHub Actions gestartet und
 
 ## Lizenz
 
-CC BY-NC 4.0
+GNU Affero General Public License v3.0 only (AGPL-3.0-only)
