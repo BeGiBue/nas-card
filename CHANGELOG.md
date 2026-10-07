@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.2 - 2026-10-07
+
+### Geändert
+
+- Laufwerke: Symbole vor Temperatur, Lebensdauer und Sektoren entfernt; Warn- und Fehlerzustände färben stattdessen den Wert.
+
+### Behoben
+
+- Kompakte Ansicht (z. B. iPhone): Die Laufwerksboxen standen nebeneinander, Status-Pill und Werte ragten aus den Boxen. Laufwerke stehen jetzt untereinander und erst nebeneinander, wenn jede Box mindestens 15em breit wird (wächst mit Schrift und `scale`).
+
 ## 1.1.1 - 2026-10-06
 
 ### Geändert
