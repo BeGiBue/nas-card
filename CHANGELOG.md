@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.1.4 - 2026-10-08
+
+### Dokumentation
+
+- README korrigiert: Breite 4 bis 12 Spalten (nicht 1 bis 12), Höhe mit Mindesthöhe statt „nicht skalierbar“, Ringdiagramm statt Tortendiagramm, Aktionszeile je nach Layout; neuer Abschnitt „Release“.
+- Release-Checkliste auf den aktuellen Ablauf gebracht (vorher Stand 1.0.1).
+- Überflüssige Platzhalterdatei `images/.keepfolder` entfernt.
+
 ## 1.1.3 - 2026-10-07
 
 ### Geändert

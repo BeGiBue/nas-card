@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <strong>Version 1.1.3</strong><br>
+  <strong>Version 1.1.4</strong><br>
   <a href="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml"><img src="https://github.com/BeGiBue/nas-card/actions/workflows/validate.yml/badge.svg" alt="HACS validation"></a>
 </p>
 
@@ -30,11 +30,11 @@
 - Messwerte linksbündig mit Icon-Chip, großer Zahl und kleiner Einheit
 - Warnfarben für CPU, RAM und Volume (orange ab 75/80/80 %, rot ab 90 %)
 - DSM-Update-Zeile mit installierter und ggf. neuer Version
-- Neustart, letzter Start und Herunterfahren in einer einheitlichen unteren Reihe
+- Neustart, letzter Start und Herunterfahren unten; im breiten Layout in einer Reihe
 - Neustart und Herunterfahren verlangen ein zweites Tippen zur Bestätigung
 - "Letzter Start" besteht aus genau zwei Textzeilen und nutzt Home Assistants automatische Zustands-/Zeitformatierung
-- Breite im Sections-Dashboard frei von 1 bis 12 Spalten einstellbar
-- Höhe wird automatisch durch die Card bestimmt und ist nicht manuell skalierbar
+- Breite im Sections-Dashboard frei von 4 bis 12 Spalten einstellbar
+- Höhe wird automatisch durch die Card bestimmt; im Layout-Editor nicht unter die benötigte Mindesthöhe einstellbar
 - Optimiert für Hochformat und Touch – iPhone, iPad und Raspberry-Pi-Kiosk: Schrift wächst mit der Kartenbreite, breites Layout ab 480 px
 
 ## Standard-Entitäten
@@ -157,9 +157,9 @@ Die Card verwendet Home Assistants eingebauten Formular-Editor (`getConfigForm()
 
 Die Gruppen **Allgemein**, **System**, **Netzwerk**, **Volume**, **Laufwerk 1**, **Laufwerk 2**, **Update** und **Aktionen** können im Editor aufgeklappt werden.
 
-## Volume-Tortendiagramm
+## Volume-Ringdiagramm
 
-Für das Tortendiagramm werden zwei Werte verwendet:
+Für das Ringdiagramm werden zwei Werte verwendet:
 
 - `volume_percent_entity`: Belegung in Prozent
 - `volume_used_entity`: tatsächlich belegter Speicherplatz
@@ -180,7 +180,7 @@ Mit `show_image: false` kann das Gerätebild vollständig ausgeblendet werden.
 
 ## Layout / Größe
 
-Im Home-Assistant-Sections-Dashboard ist die Breite frei einstellbar. Die Card startet mit 12 Spalten und erlaubt den kompletten Bereich von 1 bis 12 Spalten.
+Im Home-Assistant-Sections-Dashboard ist die Breite frei einstellbar. Die Card startet mit 12 Spalten und erlaubt 4 bis 12 Spalten.
 
 Die Höhe wird bewusst nicht als Grid-Größe vorgegeben. Home Assistant lässt die Card damit die benötigte Höhe selbst bestimmen. Die Card meldet ihre Mindesthöhe (`min_rows`); im Layout-Editor lässt sich die Höhe daher nicht kleiner einstellen, als der Inhalt braucht. Das Layout orientiert sich von den Abständen und Proportionen an der Eaton UPS Card. Bei schmalen Breiten passt sich die interne Anordnung automatisch an.
 
@@ -194,6 +194,10 @@ Letzter Start
 ```
 
 Die Ausgabe läuft über Home Assistants eigene `formatEntityState()`-Formatierung. Damit werden Sprache, Datums-/Zeitdarstellung und Home-Assistant-Locale automatisch berücksichtigt.
+
+## Release
+
+Alle Versionen stehen unter [GitHub Releases](https://github.com/BeGiBue/nas-card/releases), die Änderungen im Detail in [`CHANGELOG.md`](CHANGELOG.md). Zu jeder Version gibt es eine Datei `RELEASE_NOTES_<Version>.md`.
 
 ## Hinweise zu Marken
 
