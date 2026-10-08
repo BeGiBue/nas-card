@@ -1,32 +1,22 @@
-# Release Checklist — v1.0.1
+# Release-Checkliste
 
-## Repository vorbereitet
+Für jede neue Version `X.Y.Z`:
 
-- [x] `VERSION` steht auf `1.0.1`.
-- [x] Öffentliche Versionskennung in `nas-card.js` steht auf `1.0.1`.
-- [x] `CHANGELOG.md` für `1.0.1` aktualisiert.
-- [x] `RELEASE_NOTES_1.0.1.md` vorbereitet.
-- [x] `hacs.json` verweist auf `nas-card.js`.
-- [x] HACS-Validierung ist für `main`, Pull Requests und manuelle Ausführung vorbereitet.
-- [x] README beschreibt Installation, Konfiguration und aktuelles Layout.
-- [x] `.github/CODEOWNERS` enthält `@BeGiBue`.
-- [x] Lizenz auf AGPL-3.0-only für HACS Defaults umgestellt.
-
-## Vor Veröffentlichung prüfen
-
-- [ ] Finalen HACS-Validate-Lauf auf dem endgültigen `main`-Commit erfolgreich abschließen.
-- [ ] Card in Home Assistant mit Light Mode prüfen.
-- [ ] Card in Home Assistant mit Dark Mode prüfen.
-- [ ] Visuellen Editor prüfen: Titel, Untertitel und alle Entity-Picker.
-- [ ] Breitenänderung im Sections-Dashboard prüfen; Höhe darf nicht manuell skalierbar sein.
-- [ ] Mobile Ansicht prüfen.
-- [ ] Volume-Tortendiagramm mit realen NAS-Werten prüfen.
-- [ ] Drive-Felder prüfen: Bezeichnung oben, Zustand darunter, Inhalte zentriert.
-- [ ] Neustart/Herunterfahren mit den vorgesehenen Button-Entitäten prüfen.
-- [ ] "Letzter Start" mit Home-Assistant-Zeitformat prüfen.
-
-## Veröffentlichung
-
-- [ ] Nach dem erfolgreichen finalen HACS-Lauf Tag `v1.0.1` auf dem finalen `main`-Commit erstellen.
-- [ ] Danach GitHub Release `v1.0.1` mit dem Inhalt aus `RELEASE_NOTES_1.0.1.md` veröffentlichen.
-- [ ] Erst danach den PR für `hacs/default` erstellen.
+1. **Version an allen Stellen gleich setzen**
+   - [ ] `VERSION`
+   - [ ] `NAS_CARD_VERSION` und Kopfkommentar in `nas-card.js`
+   - [ ] Versionszeile in der `README.md` (`<strong>Version X.Y.Z</strong>`)
+   - [ ] neuer oberster Eintrag `## X.Y.Z - JJJJ-MM-TT` in `CHANGELOG.md`
+2. **Release Notes**
+   - [ ] `RELEASE_NOTES_X.Y.Z.md` anlegen (kurz, deutsch, aus dem CHANGELOG-Eintrag)
+3. **Prüfen**
+   - [ ] `node --check nas-card.js`
+   - [ ] Card in Home Assistant prüfen: Light/Dark Mode, iPhone (kompakt), iPad, 7"-Raspberry-Kiosk (ggf. mit `scale`), grafischer Editor, Layout-Editor (Mindesthöhe)
+   - [ ] Laufwerksboxen: Text bleibt in den Boxen, Werte rechtsbündig
+   - [ ] Neustart/Herunterfahren mit Bestätigung (zweites Tippen)
+4. **Veröffentlichen**
+   - [ ] Pull Request nach `main`, Check „Validate“ (HACS) grün, mergen
+   - [ ] GitHub → Releases → „Draft a new release“: Tag `vX.Y.Z` („Create new tag on publish“, Target `main`), Titel `vX.Y.Z`, Text aus `RELEASE_NOTES_X.Y.Z.md`
+5. **Nachher**
+   - [ ] In Home Assistant über HACS aktualisieren und das Frontend vollständig neu laden
+   - [ ] Unter Einstellungen → Dashboards → Ressourcen nur einen Eintrag für `nas-card` (`/hacsfiles/nas-card/nas-card.js`)
